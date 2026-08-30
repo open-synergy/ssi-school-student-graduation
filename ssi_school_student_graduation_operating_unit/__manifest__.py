@@ -20,10 +20,10 @@
     ],
     "data": [
         "security/res_groups/school_student_graduation.xml",
-        "security/ir_rule/school_student_graduation.xml",
-        "views/school_student_graduation.xml",
         "security/res_groups/school_student_graduation_batch.xml",
+        "security/ir_rule/school_student_graduation.xml",
         "security/ir_rule/school_student_graduation_batch.xml",
+        "views/school_student_graduation.xml",
         "views/school_student_graduation_batch.xml",
     ],
     "demo": [],

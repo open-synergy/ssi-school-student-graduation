@@ -20,6 +20,16 @@ class SchoolStudentGraduationBatch(models.Model):
     ]
 
     def _prepare_graduation_data(self, line):
+        """Add the batch's operating unit to the graduation document data.
+
+        Extends the base values with ``operating_unit_id`` taken from
+        this batch, so every ``school_student_graduation`` record
+        created from a line inherits the batch's single operating
+        unit.
+
+        :param line: ``school_student_graduation_batch_line`` record
+        :return: dict of ``school_student_graduation`` values
+        """
         res = super()._prepare_graduation_data(line)
         res["operating_unit_id"] = self.operating_unit_id.id
         return res
