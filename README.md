@@ -22,6 +22,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [ssi_school_student_graduation](ssi_school_student_graduation/) | 14.0.1.1.0 |  | School Student Graduation
+[ssi_school_student_graduation_operating_unit](ssi_school_student_graduation_operating_unit/) | 14.0.1.2.0 |  | School Student Graduation - Operating Unit
 
 [//]: # (end addons)
 
