@@ -35,6 +35,4 @@ module setiap-class-method-punya-docstring|models/school_student_graduation_batc
 module setiap-class-method-punya-docstring|models/school_student_graduation_batch.py _20_process_lines -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
 module setiap-class-method-punya-docstring|models/school_student_graduation_batch.py _process_graduation_line -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
 module setiap-class-method-punya-docstring|models/school_student_graduation_batch.py _prepare_graduation_data -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
-module urutan-loading-data-sesuai-tabel-09-manifest-md|approval_template/school_student_graduation.xml (posisi 7) dimuat setelah policy_template/school_student_graduation_batch.xml (posisi 8) -- warisan dari ssi-school, mengubah __manifest__.py dilarang Keputusan Desain issue #1
 module field-one2many-ber-inline-tree-juga-punya-inline-form|views/school_student_graduation_batch.xml school_student_graduation_batch.line_ids -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
-tour manifest-depends-pada-web-tour|depends-web-tour -- warisan dari ssi-school, mengubah __manifest__.py dilarang Keputusan Desain issue #1
