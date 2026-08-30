@@ -15,16 +15,6 @@
 # web_tour, inline form) adalah pekerjaan lint/refactor terpisah, bukan
 # bagian issue #1.
 
-module setiap-class-method-punya-docstring|models/school_student_graduation.py _check_student_state_allowed -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
-module setiap-class-method-punya-docstring|models/school_student_graduation.py _check_student_state_allowed_condition -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
-module setiap-class-method-punya-docstring|models/school_student_graduation.py _check_single_active_graduation -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
-module setiap-class-method-punya-docstring|models/school_student_graduation.py _check_single_active_graduation_condition -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
-module setiap-class-method-punya-docstring|models/school_student_graduation.py _get_single_active_graduation_criteria -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
-module setiap-class-method-punya-docstring|models/school_student_graduation.py _10_check_ready -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
-module setiap-class-method-punya-docstring|models/school_student_graduation.py _check_done_student_enrol -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
-module setiap-class-method-punya-docstring|models/school_student_graduation.py _20_apply_graduation -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
-module setiap-class-method-punya-docstring|models/school_student_graduation.py _30_set_enrollment_result -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
-module setiap-class-method-punya-docstring|models/school_student_graduation.py _prepare_enrollment_result_vals -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
 module setiap-class-method-punya-docstring|models/school_student_graduation_batch.py action_populate_lines -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
 module setiap-class-method-punya-docstring|models/school_student_graduation_batch.py _populate_lines -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
 module setiap-class-method-punya-docstring|models/school_student_graduation_batch.py _get_eligible_student_criteria -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
