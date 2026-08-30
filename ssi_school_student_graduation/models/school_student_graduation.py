@@ -151,6 +151,12 @@ class SchoolStudentGraduation(models.Model):
 
     @api.constrains("state", "student_id")
     def _check_student_state_allowed(self):
+        """Validate the student is enrolled before confirm/done.
+
+        Raises ``ValidationError`` when
+        ``_check_student_state_allowed_condition`` returns ``False``
+        for any record in the recordset.
+        """
         for record in self.sudo():
             if not record._check_student_state_allowed_condition():
                 error_message = (
@@ -172,6 +178,14 @@ confirmed or completed
                 raise ValidationError(error_message)
 
     def _check_student_state_allowed_condition(self):
+        """Check whether the student's state allows this state change.
+
+        Any state other than ``confirm``/``done`` is always allowed.
+        For ``confirm``/``done`` the student must be in the ``enrol``
+        state.
+
+        :return: ``True`` when the transition is allowed
+        """
         self.ensure_one()
         if self.state not in ("confirm", "done"):
             return True
@@ -179,6 +193,12 @@ confirmed or completed
 
     @api.constrains("state", "student_id")
     def _check_single_active_graduation(self):
+        """Validate no other active graduation exists for the student.
+
+        Raises ``ValidationError`` when
+        ``_check_single_active_graduation_condition`` returns
+        ``False`` for any record in the recordset.
+        """
         for record in self.sudo():
             if not record._check_single_active_graduation_condition():
                 error_message = (
@@ -201,6 +221,14 @@ confirming this one
                 raise ValidationError(error_message)
 
     def _check_single_active_graduation_condition(self):
+        """Check whether another draft/confirm graduation is a duplicate.
+
+        Always allowed outside ``draft``/``confirm`` state, or when
+        the student is not set. Otherwise searches for another
+        graduation of the same student still in ``draft``/``confirm``.
+
+        :return: ``True`` when no duplicate graduation exists
+        """
         self.ensure_one()
         if self.state not in ("draft", "confirm") or not self.student_id:
             return True
@@ -210,6 +238,13 @@ confirming this one
         return not duplicate
 
     def _get_single_active_graduation_criteria(self):
+        """Build the search domain used to detect duplicate graduations.
+
+        Extension point: override to widen or narrow what counts as
+        a duplicate active graduation for the same student.
+
+        :return: search domain excluding this record
+        """
         self.ensure_one()
         return [
             ("id", "!=", self.id),
@@ -219,10 +254,20 @@ confirming this one
 
     @ssi_decorator.pre_done_check()
     def _10_check_ready(self):
+        """Run pre-Done checks before the document reaches Done.
+
+        Calls ``_check_done_student_enrol`` to ensure the student is
+        still enrolled.
+        """
         self.ensure_one()
         self._check_done_student_enrol()
 
     def _check_done_student_enrol(self):
+        """Ensure the student is still enrolled before completing.
+
+        Raises ``ValidationError`` when the student's state is not
+        ``enrol``.
+        """
         self.ensure_one()
         if self.student_id.state != "enrol":
             error_message = (
@@ -244,11 +289,22 @@ the graduation is completed
 
     @ssi_decorator.post_done_action()
     def _20_apply_graduation(self):
+        """Move the student to the graduate state on Done.
+
+        Runs after the document reaches Done. Calls
+        ``action_set_to_graduate`` on the student with ``sudo()``.
+        """
         self.ensure_one()
         self.student_id.sudo().action_set_to_graduate()
 
     @ssi_decorator.post_done_action()
     def _30_set_enrollment_result(self):
+        """Set the active enrollment's academic year result on Done.
+
+        Runs after the document reaches Done. Writes the values from
+        ``_prepare_enrollment_result_vals`` to ``active_enrollment_id``
+        with ``sudo()``, when the student has one.
+        """
         self.ensure_one()
         if self.active_enrollment_id:
             self.active_enrollment_id.sudo().write(
@@ -256,6 +312,13 @@ the graduation is completed
             )
 
     def _prepare_enrollment_result_vals(self):
+        """Build the values written to the active enrollment on Done.
+
+        Extension point: override to set additional enrollment fields
+        when the graduation completes.
+
+        :return: dict of ``school_enrollment`` values
+        """
         self.ensure_one()
         return {
             "academic_year_result": "graduate",
