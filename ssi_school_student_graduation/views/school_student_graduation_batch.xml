@@ -85,6 +85,12 @@
                             <field name="student_id" />
                             <field name="graduation_id" />
                         </tree>
+                        <form>
+                            <group name="line_group_1">
+                                <field name="student_id" />
+                                <field name="graduation_id" />
+                            </group>
+                        </form>
                     </field>
                 </page>
             </xpath>
