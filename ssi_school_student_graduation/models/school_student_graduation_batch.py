@@ -149,10 +149,23 @@ class SchoolStudentGraduationBatch(models.Model):
     )
 
     def action_populate_lines(self):
+        """Refill the batch lines from the currently eligible students.
+
+        Delegates to ``_populate_lines`` for every record in the
+        recordset, with ``sudo()``. Replaces the whole ``line_ids``
+        content each time; students already added manually are
+        cleared and re-derived from the eligibility criteria.
+        """
         for record in self.sudo():
             record._populate_lines()
 
     def _populate_lines(self):
+        """Rebuild ``line_ids`` from the eligible student search.
+
+        Clears the existing lines, searches ``school_student`` with
+        ``_get_eligible_student_criteria``, then creates one line per
+        match via ``_prepare_batch_line_data``.
+        """
         self.ensure_one()
         self.line_ids = [(5, 0, 0)]
         students = self.env["school_student"].search(
@@ -164,6 +177,15 @@ class SchoolStudentGraduationBatch(models.Model):
         self.line_ids = line_vals
 
     def _get_eligible_student_criteria(self):
+        """Build the search domain for students eligible to graduate.
+
+        Matches enrolled students without a next grade set, further
+        narrowed by the batch's optional academic year/term/grade
+        filters. Extension point: override to widen or narrow
+        eligibility.
+
+        :return: search domain for ``school_student``
+        """
         self.ensure_one()
         criteria = [
             ("state", "=", "enrol"),
@@ -196,6 +218,14 @@ class SchoolStudentGraduationBatch(models.Model):
         return criteria
 
     def _prepare_batch_line_data(self, student):
+        """Build the ``school_student_graduation_batch_line`` values.
+
+        Extension point: override to carry additional student data
+        onto the generated line.
+
+        :param student: the ``school_student`` record to add
+        :return: dict of line values
+        """
         self.ensure_one()
         return {
             "student_id": student.id,
@@ -203,11 +233,22 @@ class SchoolStudentGraduationBatch(models.Model):
 
     @ssi_decorator.pre_done_check()
     def _10_check_ready(self):
+        """Run pre-Done checks before the batch reaches Done.
+
+        Calls ``_check_done_has_lines`` and
+        ``_check_done_lines_student_enrol`` to ensure the batch has
+        at least one line and every selected student is still
+        enrolled.
+        """
         self.ensure_one()
         self._check_done_has_lines()
         self._check_done_lines_student_enrol()
 
     def _check_done_has_lines(self):
+        """Ensure the batch has at least one student line.
+
+        Raises ``ValidationError`` when ``line_ids`` is empty.
+        """
         self.ensure_one()
         if not self.line_ids:
             error_message = (
@@ -225,6 +266,11 @@ this batch
             raise ValidationError(error_message)
 
     def _check_done_lines_student_enrol(self):
+        """Ensure every line's student is still enrolled.
+
+        Raises ``ValidationError`` listing the student names whose
+        state is no longer ``enrol``.
+        """
         self.ensure_one()
         invalid_students = self.line_ids.filtered(
             lambda line: line.student_id.state != "enrol"
@@ -250,11 +296,26 @@ this batch
 
     @ssi_decorator.post_done_action()
     def _20_process_lines(self):
+        """Process every batch line after the batch reaches Done.
+
+        Calls ``_process_graduation_line`` for each record in
+        ``line_ids``.
+        """
         self.ensure_one()
         for line in self.line_ids:
             self._process_graduation_line(line)
 
     def _process_graduation_line(self, line):
+        """Create and complete the per-student graduation document.
+
+        Builds a ``school_student_graduation`` from
+        ``_prepare_graduation_data``, drives it straight through
+        confirm/done under ``bypass_policy_check`` (see the inline
+        note below for why), then links it back onto ``line``.
+
+        :param line: the ``school_student_graduation_batch_line``
+            being processed
+        """
         self.ensure_one()
         graduation = self.env["school_student_graduation"].create(
             self._prepare_graduation_data(line)
@@ -274,6 +335,15 @@ this batch
         line.write({"graduation_id": graduation.id})
 
     def _prepare_graduation_data(self, line):
+        """Build the ``school_student_graduation`` values for ``line``.
+
+        Extension point: override to carry additional data from the
+        batch or the line onto the generated graduation document.
+
+        :param line: the ``school_student_graduation_batch_line``
+            being processed
+        :return: dict of ``school_student_graduation`` values
+        """
         self.ensure_one()
         return {
             "date": self.date,

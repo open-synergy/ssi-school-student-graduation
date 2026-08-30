@@ -15,14 +15,4 @@
 # web_tour, inline form) adalah pekerjaan lint/refactor terpisah, bukan
 # bagian issue #1.
 
-module setiap-class-method-punya-docstring|models/school_student_graduation_batch.py action_populate_lines -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
-module setiap-class-method-punya-docstring|models/school_student_graduation_batch.py _populate_lines -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
-module setiap-class-method-punya-docstring|models/school_student_graduation_batch.py _get_eligible_student_criteria -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
-module setiap-class-method-punya-docstring|models/school_student_graduation_batch.py _prepare_batch_line_data -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
-module setiap-class-method-punya-docstring|models/school_student_graduation_batch.py _10_check_ready -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
-module setiap-class-method-punya-docstring|models/school_student_graduation_batch.py _check_done_has_lines -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
-module setiap-class-method-punya-docstring|models/school_student_graduation_batch.py _check_done_lines_student_enrol -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
-module setiap-class-method-punya-docstring|models/school_student_graduation_batch.py _20_process_lines -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
-module setiap-class-method-punya-docstring|models/school_student_graduation_batch.py _process_graduation_line -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
-module setiap-class-method-punya-docstring|models/school_student_graduation_batch.py _prepare_graduation_data -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
 module field-one2many-ber-inline-tree-juga-punya-inline-form|views/school_student_graduation_batch.xml school_student_graduation_batch.line_ids -- warisan dari ssi-school, di luar lingkup pemindahan byte-identik issue #1
