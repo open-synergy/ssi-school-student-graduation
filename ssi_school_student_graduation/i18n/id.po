@@ -1,0 +1,948 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ssi_school_student_graduation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-03 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: ssi_school_student_graduation
+#: code:addons/ssi_school_student_graduation/models/school_student_graduation.py:0
+#, python-format
+msgid ""
+"\n"
+"Context: Change student graduation state into %s\n"
+"Database ID: %s\n"
+"Problem: Another graduation for student '%s' is already draft or\n"
+"waiting for approval\n"
+"Solution: Complete, reject, or cancel the other graduation before\n"
+"confirming this one\n"
+msgstr ""
+"\n"
+"Konteks: Mengubah status kelulusan siswa menjadi %s\n"
+"ID Basis Data: %s\n"
+"Masalah: Kelulusan lain untuk siswa '%s' masih berstatus draf atau\n"
+"menunggu persetujuan\n"
+"Solusi: Selesaikan, tolak, atau batalkan kelulusan lainnya sebelum\n"
+"mengonfirmasi kelulusan ini\n"
+
+#. module: ssi_school_student_graduation
+#: code:addons/ssi_school_student_graduation/models/school_student_graduation.py:0
+#, python-format
+msgid ""
+"\n"
+"Context: Change student graduation state into %s\n"
+"Database ID: %s\n"
+"Problem: Student '%s' is not in enrolled state\n"
+"Solution: The student must be enrolled before this graduation can be\n"
+"confirmed or completed\n"
+msgstr ""
+"\n"
+"Konteks: Mengubah status kelulusan siswa menjadi %s\n"
+"ID Basis Data: %s\n"
+"Masalah: Siswa '%s' tidak berstatus terdaftar\n"
+"Solusi: Siswa harus terdaftar sebelum kelulusan ini dapat\n"
+"dikonfirmasi atau diselesaikan\n"
+
+#. module: ssi_school_student_graduation
+#: code:addons/ssi_school_student_graduation/models/school_student_graduation.py:0
+#, python-format
+msgid ""
+"\n"
+"Context: Complete student graduation\n"
+"Database ID: %s\n"
+"Problem: Student '%s' is no longer enrolled\n"
+"Solution: Cancel this graduation; the student must stay enrolled until\n"
+"the graduation is completed\n"
+msgstr ""
+"\n"
+"Konteks: Menyelesaikan kelulusan siswa\n"
+"ID Basis Data: %s\n"
+"Masalah: Siswa '%s' tidak lagi terdaftar\n"
+"Solusi: Batalkan kelulusan ini; siswa harus tetap terdaftar sampai\n"
+"kelulusan diselesaikan\n"
+
+#. module: ssi_school_student_graduation
+#: code:addons/ssi_school_student_graduation/models/school_student_graduation_batch.py:0
+#, python-format
+msgid ""
+"\n"
+"Context: Complete student graduation batch\n"
+"Database ID: %s\n"
+"Problem: No student line has been added to this batch\n"
+"Solution: Populate or add at least one student line before completing\n"
+"this batch\n"
+msgstr ""
+"\n"
+"Konteks: Menyelesaikan batch kelulusan siswa\n"
+"ID Basis Data: %s\n"
+"Masalah: Belum ada baris siswa yang ditambahkan ke batch ini\n"
+"Solusi: Isi atau tambahkan setidaknya satu baris siswa sebelum\n"
+"menyelesaikan batch ini\n"
+
+#. module: ssi_school_student_graduation
+#: code:addons/ssi_school_student_graduation/models/school_student_graduation_batch.py:0
+#, python-format
+msgid ""
+"\n"
+"Context: Complete student graduation batch\n"
+"Database ID: %s\n"
+"Problem: Status check ineligible student(s) failed: %s\n"
+"Solution: Remove the ineligible student line(s), or ensure every\n"
+"selected student is still in the enrolled state, before completing\n"
+"this batch\n"
+msgstr ""
+"\n"
+"Konteks: Menyelesaikan batch kelulusan siswa\n"
+"ID Basis Data: %s\n"
+"Masalah: Pemeriksaan status gagal untuk siswa yang tidak memenuhi syarat: %s\n"
+"Solusi: Hapus baris siswa yang tidak memenuhi syarat, atau pastikan setiap\n"
+"siswa yang dipilih masih berstatus terdaftar, sebelum menyelesaikan\n"
+"batch ini\n"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch_line__batch_id
+msgid "# Batch"
+msgstr "No. Batch"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__name
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__name
+msgid "# Document"
+msgstr "No. Dokumen"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__academic_term_id
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__academic_term_id
+#: model_terms:ir.ui.view,arch_db:ssi_school_student_graduation.school_student_graduation_batch_view_search
+#: model_terms:ir.ui.view,arch_db:ssi_school_student_graduation.school_student_graduation_view_search
+msgid "Academic Term"
+msgstr "Periode Akademik"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__academic_year_id
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__academic_year_id
+#: model_terms:ir.ui.view,arch_db:ssi_school_student_graduation.school_student_graduation_batch_view_search
+#: model_terms:ir.ui.view,arch_db:ssi_school_student_graduation.school_student_graduation_view_search
+msgid "Academic Year"
+msgstr "Tahun Ajaran"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__message_needaction
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__message_needaction
+msgid "Action Needed"
+msgstr "Perlu Tindakan"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__active_approval_ids
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__active_approval_ids
+msgid "Active Approvals"
+msgstr "Persetujuan Aktif"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__active_enrollment_id
+msgid "Active Enrollment"
+msgstr "Pendaftaran Aktif"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__active_approver_partner_ids
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__active_approver_partner_ids
+msgid "Active Partners"
+msgstr "Mitra Aktif"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__active_approver_user_ids
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__active_approver_user_ids
+msgid "Active Users"
+msgstr "Pengguna Aktif"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__activity_ids
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__activity_ids
+msgid "Activities"
+msgstr "Aktivitas"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__activity_exception_decoration
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Dekorasi Pengecualian Aktivitas"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__activity_state
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__activity_state
+msgid "Activity State"
+msgstr "Status Aktivitas"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__activity_type_icon
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Ikon Jenis Aktivitas"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__note
+msgid "Additional notes or remarks about this graduation."
+msgstr "Catatan atau keterangan tambahan tentang kelulusan ini."
+
+#. module: ssi_school_student_graduation
+#: model:res.groups,name:ssi_school_student_graduation.school_student_graduation_all_group
+#: model:res.groups,name:ssi_school_student_graduation.school_student_graduation_batch_all_group
+msgid "All"
+msgstr "Semua"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__allowed_policy_template_ids
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__allowed_policy_template_ids
+msgid "Allowed Policy Templates"
+msgstr "Templat Kebijakan yang Diizinkan"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__approval_template_id
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__approval_template_id
+msgid "Approval Configuration"
+msgstr "Konfigurasi Persetujuan"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__approval_template_id
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__approval_template_id
+msgid "Approval Template"
+msgstr "Templat Persetujuan"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__approval_ids
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__approval_ids
+msgid "Approvals"
+msgstr "Persetujuan"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__approve_ok
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__approve_ok
+msgid ""
+"Approve policy\n"
+"\n"
+"* If active user can see and execute 'Approve' button"
+msgstr ""
+"Kebijakan persetujuan\n"
+"\n"
+"* Jika aktif, pengguna dapat melihat dan menekan tombol 'Setujui'"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__approved
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__approved
+msgid "Approved"
+msgstr "Disetujui"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__message_attachment_count
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__message_attachment_count
+msgid "Attachment Count"
+msgstr "Jumlah Lampiran"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__approve_ok
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__approve_ok
+msgid "Can Approve"
+msgstr "Dapat Menyetujui"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__cancel_ok
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__cancel_ok
+msgid "Can Cancel"
+msgstr "Dapat Membatalkan"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__confirm_ok
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__confirm_ok
+msgid "Can Confirm"
+msgstr "Dapat Mengonfirmasi"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__done_ok
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__done_ok
+msgid "Can Finished"
+msgstr "Dapat Diselesaikan"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__manual_number_ok
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__manual_number_ok
+msgid "Can Input Manual Document Number"
+msgstr "Dapat Memasukkan Nomor Dokumen Secara Manual"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__reject_ok
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__reject_ok
+msgid "Can Reject"
+msgstr "Dapat Menolak"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__restart_ok
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__restart_ok
+msgid "Can Restart"
+msgstr "Dapat Memulai Ulang"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__restart_approval_ok
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__restart_approval_ok
+msgid "Can Restart Approval"
+msgstr "Dapat Memulai Ulang Persetujuan"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__cancel_reason_id
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__cancel_reason_id
+msgid "Cancel Reason"
+msgstr "Alasan Pembatalan"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__cancel_ok
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__cancel_ok
+msgid ""
+"Cancel policy\n"
+"\n"
+"* If active user can see and execute 'Cancel' button"
+msgstr ""
+"Kebijakan pembatalan\n"
+"\n"
+"* Jika aktif, pengguna dapat melihat dan menekan tombol 'Batal'"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__company_id
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__company_id
+#: model:res.groups,name:ssi_school_student_graduation.school_student_graduation_batch_company_group
+#: model:res.groups,name:ssi_school_student_graduation.school_student_graduation_company_group
+msgid "Company"
+msgstr "Perusahaan"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__company_partner_id
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__company_partner_id
+msgid "Company Partner"
+msgstr "Mitra Perusahaan"
+
+#. module: ssi_school_student_graduation
+#: model:res.groups,name:ssi_school_student_graduation.school_student_graduation_batch_company_child_group
+#: model:res.groups,name:ssi_school_student_graduation.school_student_graduation_company_child_group
+msgid "Company and All Child Companies"
+msgstr "Perusahaan dan Semua Perusahaan Turunan"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__company_id
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__company_id
+msgid ""
+"Company that own the document\n"
+"\n"
+"* Automatically filled with user's company.\n"
+"  Default company can be changed"
+msgstr ""
+"Perusahaan pemilik dokumen\n"
+"\n"
+"* Terisi otomatis dengan perusahaan pengguna.\n"
+"  Perusahaan bawaan dapat diubah"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__confirm_ok
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__confirm_ok
+msgid ""
+"Confirm policy\n"
+"\n"
+"* If active user can see and execute 'Confirm' button"
+msgstr ""
+"Kebijakan konfirmasi\n"
+"\n"
+"* Jika aktif, pengguna dapat melihat dan menekan tombol 'Konfirmasi'"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__create_uid
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__create_uid
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch_line__create_uid
+msgid "Created by"
+msgstr "Dibuat oleh"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__create_date
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__create_date
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch_line__create_date
+msgid "Created on"
+msgstr "Dibuat pada"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__date
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__date
+msgid "Date"
+msgstr "Tanggal"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__display_name
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__display_name
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch_line__display_name
+msgid "Display Name"
+msgstr "Nama Tampilan"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__done_ok
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__done_ok
+msgid ""
+"Done policy\n"
+"\n"
+"* If active user can see and execute 'Done' button"
+msgstr ""
+"Kebijakan penyelesaian\n"
+"\n"
+"* Jika aktif, pengguna dapat melihat dan menekan tombol 'Selesai'"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__message_follower_ids
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__message_follower_ids
+msgid "Followers"
+msgstr "Pengikut"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__message_channel_ids
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Pengikut (Saluran)"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__message_partner_ids
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Pengikut (Mitra)"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__activity_type_icon
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Ikon Font Awesome, mis. fa-tasks"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__grade_id
+#: model_terms:ir.ui.view,arch_db:ssi_school_student_graduation.school_student_graduation_batch_view_search
+msgid "Grade"
+msgstr "Tingkat"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch_line__graduation_id
+msgid "Graduation"
+msgstr "Kelulusan"
+
+#. module: ssi_school_student_graduation
+#: model:ir.actions.act_window,name:ssi_school_student_graduation.school_student_graduation_batch_action
+#: model:ir.ui.menu,name:ssi_school_student_graduation.school_student_graduation_batch_menu
+msgid "Graduation Batches"
+msgstr "Batch Kelulusan"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__graduation_date
+msgid "Graduation Date"
+msgstr "Tanggal Kelulusan"
+
+#. module: ssi_school_student_graduation
+#: model_terms:ir.ui.view,arch_db:ssi_school_student_graduation.school_student_graduation_batch_view_search
+#: model_terms:ir.ui.view,arch_db:ssi_school_student_graduation.school_student_graduation_view_search
+msgid "Group By"
+msgstr "Kelompokkan Menurut"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__id
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__id
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__activity_exception_icon
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__activity_exception_icon
+msgid "Icon"
+msgstr "Ikon"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__activity_exception_icon
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Ikon untuk menandai aktivitas pengecualian."
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__message_needaction
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__message_unread
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__message_needaction
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Jika dicentang, pesan baru memerlukan perhatian Anda."
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__message_has_error
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Jika dicentang, sebagian pesan mengalami kesalahan pengiriman."
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__message_is_follower
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__message_is_follower
+msgid "Is Follower"
+msgstr "Adalah Pengikut"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation____last_update
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch____last_update
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch_line____last_update
+msgid "Last Modified on"
+msgstr "Terakhir Diubah pada"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__write_uid
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__write_uid
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch_line__write_uid
+msgid "Last Updated by"
+msgstr "Terakhir Diperbarui oleh"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__write_date
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__write_date
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch_line__write_date
+msgid "Last Updated on"
+msgstr "Terakhir Diperbarui pada"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__line_ids
+msgid "Lines"
+msgstr "Baris"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__message_main_attachment_id
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Lampiran Utama"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__manual_number_ok
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__manual_number_ok
+msgid ""
+"Manual number assignment policy\n"
+"\n"
+"* If active user can edit document number"
+msgstr ""
+"Kebijakan penetapan nomor manual\n"
+"\n"
+"* Jika aktif, pengguna dapat mengubah nomor dokumen"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__message_has_error
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__message_has_error
+msgid "Message Delivery error"
+msgstr "Kesalahan Pengiriman Pesan"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__message_ids
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__message_ids
+msgid "Messages"
+msgstr "Pesan"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Batas Waktu Aktivitas Saya"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__need_validation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__need_validation
+msgid "Need Validation"
+msgstr "Perlu Validasi"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Batas Waktu Aktivitas Berikutnya"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__activity_summary
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__activity_summary
+msgid "Next Activity Summary"
+msgstr "Ringkasan Aktivitas Berikutnya"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__activity_type_id
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__activity_type_id
+msgid "Next Activity Type"
+msgstr "Jenis Aktivitas Berikutnya"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__next_approval_ids
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__next_approval_ids
+msgid "Next Approvals"
+msgstr "Persetujuan Berikutnya"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__note
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__note
+msgid "Note"
+msgstr "Catatan"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__message_needaction_counter
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Jumlah Tindakan"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__message_has_error_counter
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__message_has_error_counter
+msgid "Number of errors"
+msgstr "Jumlah kesalahan"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__message_needaction_counter
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Jumlah pesan yang memerlukan tindakan"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__message_has_error_counter
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Jumlah pesan dengan kesalahan pengiriman"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__message_unread_counter
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Jumlah pesan yang belum dibaca"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__academic_term_id
+msgid ""
+"Optional filter: when set, only students whose active enrollment belongs to "
+"this academic term are proposed when populating lines."
+msgstr ""
+"Filter opsional: bila diisi, hanya siswa yang pendaftaran aktifnya berada pada periode akademik ini yang diusulkan saat mengisi baris."
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__academic_year_id
+msgid ""
+"Optional filter: when set, only students whose active enrollment belongs to "
+"this academic year are proposed when populating lines."
+msgstr ""
+"Filter opsional: bila diisi, hanya siswa yang pendaftaran aktifnya berada pada tahun ajaran ini yang diusulkan saat mengisi baris."
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__grade_id
+msgid ""
+"Optional filter: when set, only students whose active enrollment belongs to "
+"this grade are proposed when populating lines."
+msgstr ""
+"Filter opsional: bila diisi, hanya siswa yang pendaftaran aktifnya berada pada tingkat ini yang diusulkan saat mengisi baris."
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__policy_template_id
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__policy_template_id
+msgid "Policy Template"
+msgstr "Templat Kebijakan"
+
+#. module: ssi_school_student_graduation
+#: model_terms:ir.ui.view,arch_db:ssi_school_student_graduation.school_student_graduation_batch_view_form
+msgid "Populate Eligible Students"
+msgstr "Isi dengan Siswa yang Memenuhi Syarat"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__reject_ok
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__reject_ok
+msgid ""
+"Reject policy\n"
+"\n"
+"* If active user can see and execute 'Reject' button"
+msgstr ""
+"Kebijakan penolakan\n"
+"\n"
+"* Jika aktif, pengguna dapat melihat dan menekan tombol 'Tolak'"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__rejected
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__rejected
+msgid "Rejected"
+msgstr "Ditolak"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__user_id
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__user_id
+msgid "Responsible"
+msgstr "Penanggung Jawab"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__activity_user_id
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__activity_user_id
+msgid "Responsible User"
+msgstr "Pengguna Penanggung Jawab"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__restart_approval_ok
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__restart_approval_ok
+msgid ""
+"Restart approval policy\n"
+"\n"
+"* If active user can see and execute 'Restart Approval' button"
+msgstr ""
+"Kebijakan mulai ulang persetujuan\n"
+"\n"
+"* Jika aktif, pengguna dapat melihat dan menekan tombol 'Mulai Ulang Persetujuan'"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__restart_ok
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__restart_ok
+msgid ""
+"Restart policy\n"
+"\n"
+"* If active user can see and execute 'Restart' button"
+msgstr ""
+"Kebijakan mulai ulang\n"
+"\n"
+"* Jika aktif, pengguna dapat melihat dan menekan tombol 'Mulai Ulang'"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__reviewer_id
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__reviewer_id
+msgid "Reviewer"
+msgstr "Pemeriksa"
+
+#. module: ssi_school_student_graduation
+#: model:ir.module.category,name:ssi_school_student_graduation.school_student_graduation_data_ownership_module_category
+#: model:ir.module.category,name:ssi_school_student_graduation.school_student_graduation_workflow_module_category
+msgid "School Student Graduation"
+msgstr "Kelulusan Siswa Sekolah"
+
+#. module: ssi_school_student_graduation
+#: model:ir.module.category,name:ssi_school_student_graduation.school_student_graduation_batch_data_ownership_module_category
+#: model:ir.module.category,name:ssi_school_student_graduation.school_student_graduation_batch_workflow_module_category
+msgid "School Student Graduation Batch"
+msgstr "Batch Kelulusan Siswa Sekolah"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__state
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__state
+msgid "State"
+msgstr "Status"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__activity_state
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Status berdasarkan aktivitas\n"
+"Terlambat: Batas waktu sudah lewat\n"
+"Hari ini: Tanggal aktivitas adalah hari ini\n"
+"Direncanakan: Aktivitas mendatang."
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__student_id
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch_line__student_id
+#: model_terms:ir.ui.view,arch_db:ssi_school_student_graduation.school_student_graduation_view_search
+msgid "Student"
+msgstr "Siswa"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model,name:ssi_school_student_graduation.model_school_student_graduation
+msgid "Student Graduation"
+msgstr "Kelulusan Siswa"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model,name:ssi_school_student_graduation.model_school_student_graduation_batch
+msgid "Student Graduation Batch"
+msgstr "Batch Kelulusan Siswa"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model,name:ssi_school_student_graduation.model_school_student_graduation_batch_line
+msgid "Student Graduation Batch Line"
+msgstr "Baris Batch Kelulusan Siswa"
+
+#. module: ssi_school_student_graduation
+#: model:ir.actions.act_window,name:ssi_school_student_graduation.school_student_graduation_action
+#: model:ir.ui.menu,name:ssi_school_student_graduation.school_student_graduation_menu
+msgid "Student Graduations"
+msgstr "Kelulusan Siswa"
+
+#. module: ssi_school_student_graduation
+#: model_terms:ir.ui.view,arch_db:ssi_school_student_graduation.school_student_graduation_batch_view_form
+msgid "Students"
+msgstr "Siswa"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__line_ids
+msgid ""
+"Students selected to be graduated by this batch. Can be populated "
+"automatically from the filters above, or managed manually."
+msgstr ""
+"Siswa yang dipilih untuk diluluskan oleh batch ini. Dapat diisi otomatis dari filter di atas, atau dikelola secara manual."
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch_line__batch_id
+msgid "The Student Graduation Batch this line belongs to."
+msgstr "Batch Kelulusan Siswa tempat baris ini berada."
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch_line__graduation_id
+msgid ""
+"The Student Graduation document generated for this line once the batch is "
+"Done. Empty until the batch is processed."
+msgstr ""
+"Dokumen Kelulusan Siswa yang dibuat untuk baris ini setelah batch Selesai. Kosong sampai batch diproses."
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__academic_term_id
+msgid "The academic term of the student's active enrollment."
+msgstr "Periode akademik dari pendaftaran aktif siswa."
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__academic_year_id
+msgid "The academic year of the student's active enrollment."
+msgstr "Tahun ajaran dari pendaftaran aktif siswa."
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__date
+msgid "The date this graduation batch document was created."
+msgstr "Tanggal dokumen batch kelulusan ini dibuat."
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__date
+msgid "The date this graduation document was created."
+msgstr "Tanggal dokumen kelulusan ini dibuat."
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__graduation_date
+msgid "The official date the student graduated."
+msgstr "Tanggal resmi siswa dinyatakan lulus."
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__student_id
+msgid "The student being graduated by this document."
+msgstr "Siswa yang diluluskan oleh dokumen ini."
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch_line__student_id
+msgid "The student selected to be graduated by this batch."
+msgstr "Siswa yang dipilih untuk diluluskan oleh batch ini."
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__active_enrollment_id
+msgid ""
+"The student's currently active (open) enrollment, automatically taken from "
+"the student. Its academic year result is set to Graduate when this document "
+"reaches Done."
+msgstr ""
+"Pendaftaran siswa yang sedang aktif (terbuka), diambil otomatis dari siswa. Hasil tahun ajarannya diatur menjadi Lulus saat dokumen ini mencapai status Selesai."
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__name
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__name
+msgid ""
+"Transaction/document number\n"
+"\n"
+"* Unique indentifer of transaction\n"
+"* Leave '/' to automatically generate number\n"
+"* Change '/' into any number/identifier to manually assign number.\n"
+"  Manual number assignment can be done in 'Draft' state\n"
+"  Only user with 'Can Manualy Assign Number' policy can manually assign number.\n"
+"* Transaction with number other than '/' can not be deleted."
+msgstr ""
+"Nomor transaksi/dokumen\n"
+"\n"
+"* Pengenal unik transaksi\n"
+"* Biarkan '/' untuk menghasilkan nomor secara otomatis\n"
+"* Ubah '/' menjadi nomor/pengenal apa pun untuk menetapkan nomor secara manual.\n"
+"  Penetapan nomor manual dapat dilakukan pada status 'Draf'\n"
+"  Hanya pengguna dengan kebijakan 'Dapat Memasukkan Nomor Dokumen Secara Manual' yang dapat menetapkan nomor secara manual.\n"
+"* Transaksi dengan nomor selain '/' tidak dapat dihapus."
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__activity_exception_decoration
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Jenis aktivitas pengecualian pada data."
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__message_unread
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__message_unread
+msgid "Unread Messages"
+msgstr "Pesan yang Belum Dibaca"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__message_unread_counter
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Penghitung Pesan yang Belum Dibaca"
+
+#. module: ssi_school_student_graduation
+#: model:res.groups,name:ssi_school_student_graduation.school_student_graduation_batch_user_group
+#: model:res.groups,name:ssi_school_student_graduation.school_student_graduation_user_group
+msgid "User"
+msgstr "Pengguna"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__user_id
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__user_id
+msgid ""
+"User that responsible for document\n"
+"\n"
+"* Create user can be different with responsible user\n"
+"* Automatically filled with user that initiate document creation.\n"
+"  Default responsible can be changed."
+msgstr ""
+"Pengguna yang bertanggung jawab atas dokumen\n"
+"\n"
+"* Pengguna pembuat dapat berbeda dengan pengguna penanggung jawab\n"
+"* Terisi otomatis dengan pengguna yang memulai pembuatan dokumen.\n"
+"  Penanggung jawab bawaan dapat diubah."
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__reviewer_id
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__reviewer_id
+msgid ""
+"User that responsible to review document\n"
+"\n"
+"* Unless it configured to approve reviewer does not equal to approver"
+msgstr ""
+"Pengguna yang bertanggung jawab memeriksa dokumen\n"
+"\n"
+"* Kecuali dikonfigurasi untuk menyetujui, pemeriksa tidak sama dengan penyetuju"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__active_approver_user_ids
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__active_approver_user_ids
+msgid "Users that can approve/reject document"
+msgstr "Pengguna yang dapat menyetujui/menolak dokumen"
+
+#. module: ssi_school_student_graduation
+#: model:res.groups,name:ssi_school_student_graduation.school_student_graduation_batch_validator_group
+#: model:res.groups,name:ssi_school_student_graduation.school_student_graduation_validator_group
+msgid "Validator"
+msgstr "Validator"
+
+#. module: ssi_school_student_graduation
+#: model:res.groups,name:ssi_school_student_graduation.school_student_graduation_batch_viewer_group
+#: model:res.groups,name:ssi_school_student_graduation.school_student_graduation_viewer_group
+msgid "Viewer"
+msgstr "Pelihat"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__website_message_ids
+#: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__website_message_ids
+msgid "Website Messages"
+msgstr "Pesan Situs Web"
+
+#. module: ssi_school_student_graduation
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__website_message_ids
+#: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__website_message_ids
+msgid "Website communication history"
+msgstr "Riwayat komunikasi situs web"
