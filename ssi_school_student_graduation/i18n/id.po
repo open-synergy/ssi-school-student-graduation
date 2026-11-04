@@ -232,7 +232,7 @@ msgid ""
 "\n"
 "* If active user can see and execute 'Approve' button"
 msgstr ""
-"Kebijakan persetujuan\n"
+"Kebijakan setujui\n"
 "\n"
 "* Jika aktif, pengguna dapat melihat dan menekan tombol 'Setujui'"
 
@@ -276,7 +276,7 @@ msgstr "Dapat Diselesaikan"
 #: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__manual_number_ok
 #: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__manual_number_ok
 msgid "Can Input Manual Document Number"
-msgstr "Dapat Memasukkan Nomor Dokumen Secara Manual"
+msgstr "Dapat Memasukkan Nomor Dokumen Manual"
 
 #. module: ssi_school_student_graduation
 #: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__reject_ok
@@ -310,7 +310,7 @@ msgid ""
 "\n"
 "* If active user can see and execute 'Cancel' button"
 msgstr ""
-"Kebijakan pembatalan\n"
+"Kebijakan batal\n"
 "\n"
 "* Jika aktif, pengguna dapat melihat dan menekan tombol 'Batal'"
 
@@ -332,7 +332,7 @@ msgstr "Mitra Perusahaan"
 #: model:res.groups,name:ssi_school_student_graduation.school_student_graduation_batch_company_child_group
 #: model:res.groups,name:ssi_school_student_graduation.school_student_graduation_company_child_group
 msgid "Company and All Child Companies"
-msgstr "Perusahaan dan Semua Perusahaan Turunan"
+msgstr "Perusahaan dan Semua Anak Perusahaan"
 
 #. module: ssi_school_student_graduation
 #: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__company_id
@@ -345,8 +345,8 @@ msgid ""
 msgstr ""
 "Perusahaan pemilik dokumen\n"
 "\n"
-"* Terisi otomatis dengan perusahaan pengguna.\n"
-"  Perusahaan bawaan dapat diubah"
+"* Otomatis diisi dengan perusahaan pengguna.\n"
+"  Perusahaan default dapat diubah"
 
 #. module: ssi_school_student_graduation
 #: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__confirm_ok
@@ -395,7 +395,7 @@ msgid ""
 "\n"
 "* If active user can see and execute 'Done' button"
 msgstr ""
-"Kebijakan penyelesaian\n"
+"Kebijakan selesai\n"
 "\n"
 "* Jika aktif, pengguna dapat melihat dan menekan tombol 'Selesai'"
 
@@ -421,7 +421,7 @@ msgstr "Pengikut (Mitra)"
 #: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__activity_type_icon
 #: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__activity_type_icon
 msgid "Font awesome icon e.g. fa-tasks"
-msgstr "Ikon Font Awesome, mis. fa-tasks"
+msgstr "Ikon Font Awesome, misalnya fa-tasks"
 
 #. module: ssi_school_student_graduation
 #: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation_batch__grade_id
@@ -449,7 +449,7 @@ msgstr "Tanggal Kelulusan"
 #: model_terms:ir.ui.view,arch_db:ssi_school_student_graduation.school_student_graduation_batch_view_search
 #: model_terms:ir.ui.view,arch_db:ssi_school_student_graduation.school_student_graduation_view_search
 msgid "Group By"
-msgstr "Kelompokkan Menurut"
+msgstr "Kelompokkan Berdasarkan"
 
 #. module: ssi_school_student_graduation
 #: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__id
@@ -482,7 +482,7 @@ msgstr "Jika dicentang, pesan baru memerlukan perhatian Anda."
 #: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__message_has_error
 #: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__message_has_error
 msgid "If checked, some messages have a delivery error."
-msgstr "Jika dicentang, sebagian pesan mengalami kesalahan pengiriman."
+msgstr "Jika dicentang, beberapa pesan mengalami kesalahan pengiriman."
 
 #. module: ssi_school_student_graduation
 #: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__message_is_follower
@@ -530,7 +530,7 @@ msgid ""
 "\n"
 "* If active user can edit document number"
 msgstr ""
-"Kebijakan penetapan nomor manual\n"
+"Kebijakan penomoran manual\n"
 "\n"
 "* Jika aktif, pengguna dapat mengubah nomor dokumen"
 
@@ -661,7 +661,7 @@ msgid ""
 "\n"
 "* If active user can see and execute 'Reject' button"
 msgstr ""
-"Kebijakan penolakan\n"
+"Kebijakan tolak\n"
 "\n"
 "* Jika aktif, pengguna dapat melihat dan menekan tombol 'Tolak'"
 
@@ -742,8 +742,8 @@ msgid ""
 msgstr ""
 "Status berdasarkan aktivitas\n"
 "Terlambat: Batas waktu sudah lewat\n"
-"Hari ini: Tanggal aktivitas adalah hari ini\n"
-"Direncanakan: Aktivitas mendatang."
+"Hari Ini: Tanggal aktivitas hari ini\n"
+"Terjadwal: Aktivitas mendatang."
 
 #. module: ssi_school_student_graduation
 #: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__student_id
@@ -861,15 +861,15 @@ msgstr ""
 "* Pengenal unik transaksi\n"
 "* Biarkan '/' untuk menghasilkan nomor secara otomatis\n"
 "* Ubah '/' menjadi nomor/pengenal apa pun untuk menetapkan nomor secara manual.\n"
-"  Penetapan nomor manual dapat dilakukan pada status 'Draf'\n"
-"  Hanya pengguna dengan kebijakan 'Dapat Memasukkan Nomor Dokumen Secara Manual' yang dapat menetapkan nomor secara manual.\n"
+"  Penetapan nomor manual dapat dilakukan dalam status 'Draf'\n"
+"  Hanya pengguna dengan kebijakan 'Dapat Memasukkan Nomor Dokumen Manual' yang dapat menetapkan nomor secara manual.\n"
 "* Transaksi dengan nomor selain '/' tidak dapat dihapus."
 
 #. module: ssi_school_student_graduation
 #: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation__activity_exception_decoration
 #: model:ir.model.fields,help:ssi_school_student_graduation.field_school_student_graduation_batch__activity_exception_decoration
 msgid "Type of the exception activity on record."
-msgstr "Jenis aktivitas pengecualian pada data."
+msgstr "Jenis aktivitas pengecualian yang tercatat."
 
 #. module: ssi_school_student_graduation
 #: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__message_unread
@@ -902,7 +902,7 @@ msgstr ""
 "Pengguna yang bertanggung jawab atas dokumen\n"
 "\n"
 "* Pengguna pembuat dapat berbeda dengan pengguna penanggung jawab\n"
-"* Terisi otomatis dengan pengguna yang memulai pembuatan dokumen.\n"
+"* Otomatis diisi dengan pengguna yang memulai pembuatan dokumen.\n"
 "  Penanggung jawab bawaan dapat diubah."
 
 #. module: ssi_school_student_graduation
@@ -933,7 +933,7 @@ msgstr "Validator"
 #: model:res.groups,name:ssi_school_student_graduation.school_student_graduation_batch_viewer_group
 #: model:res.groups,name:ssi_school_student_graduation.school_student_graduation_viewer_group
 msgid "Viewer"
-msgstr "Pelihat"
+msgstr "Penampil"
 
 #. module: ssi_school_student_graduation
 #: model:ir.model.fields,field_description:ssi_school_student_graduation.field_school_student_graduation__website_message_ids
